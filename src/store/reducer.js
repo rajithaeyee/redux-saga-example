@@ -1,5 +1,6 @@
 const initialState ={
-    count: 0
+    count: 0,
+    actionTypes: ['Increment','Decrement']
 }
 const reducer = (state = initialState, action) =>{
     switch(action.type){

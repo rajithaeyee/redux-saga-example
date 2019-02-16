@@ -7,8 +7,8 @@ render(){
     return(
         <div>
          <h1>{this.props.counter}</h1>   
-        <CounterController clicked={this.props.onIncrementCounter} actionType="increment"/>
-        <CounterController clicked={this.props.onDecrementCounter} actionType="decrement"/>
+        <CounterController clicked={this.props.onIncrementCounter} actionType={this.props.actionTypes[0]}/>
+        <CounterController clicked={this.props.onDecrementCounter} actionType={this.props.actionTypes[1]}/>
         </div>
     );
 }
@@ -17,7 +17,8 @@ render(){
 const mapStateToProps = state =>{
     debugger;
     return{
-        counter: state.count
+        counter: state.count,
+        actionTypes: state.actionTypes
     };
 };
 
