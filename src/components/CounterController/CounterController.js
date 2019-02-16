@@ -3,7 +3,7 @@ import React from 'react';
 const counterController = (props)=>{
 
     return(
-        <button onClick={()=>props.count(props.actionType)}>
+        <button onClick={props.clicked}>
         {props.actionType}
         </button>
     );
